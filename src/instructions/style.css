@@ -1,0 +1,172 @@
+.instructions {
+  padding-bottom: 2em;
+  font: 1em/1.5 sans-serif;
+  color: #ddd;
+  display: flex;
+  gap: 2em;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.instructions.active {
+  padding-top: 2em;
+}
+
+.instructions button {
+  border: none;
+  background: rgba(0, 0, 0, 0.2);
+  color: #888;
+  padding: 0.6em;
+  margin-left: 0.5em;
+  cursor: pointer;
+  border-radius: 0.3em;
+  text-align: left;
+}
+
+.instructions button.active {
+  color: #fff;
+}
+
+.instructions > nav {
+  position: absolute;
+  width: 100vw;
+  margin: 0;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.instructions > nav button {
+  width: 100%;
+  max-width: 1000px;
+  margin: auto;
+  background: transparent;
+}
+
+.instructions > nav span {
+  margin-right: 0.5em;
+  display: inline-block;
+}
+
+.instructions > nav button.active span {
+  transform: rotate(90deg);
+}
+
+.instructions h2 {
+  display: flex;
+  color: fff;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.instructions h2 button.active {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.instructions li {
+  margin-top: 1em;
+}
+
+.instructions em {
+  text-transform: uppercase;
+}
+.instructions em:before {
+  content: '*';
+}
+.instructions em:after {
+  content: '*:';
+  margin-right: 0.4em;
+}
+
+.instructions main p {
+  padding-left: 1.2em;
+  font-size: 0.8em;
+}
+
+.instructions section {
+  position: relative;
+}
+
+.instructions h4 {
+  position: absolute;
+  font-size: 0.8em;
+  text-align: center;
+  text-transform: uppercase;
+  color: #888;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  top: 0;
+  left: 0;
+  padding: 0.8em;
+  margin: 0;
+}
+
+.instructions img {
+  max-width: 50vw;
+}
+
+.instructions strong {
+  text-transform: uppercase;
+  font-size: 0.9em;
+}
+
+.instructions aside {
+  margin-top: 3em;
+  margin-left: 1.1em;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 0.6em;
+  font-size: 0.9em;
+}
+
+.instructions h3 {
+  font-size: 0.8em;
+  text-transform: uppercase;
+  margin: 0;
+  margin-bottom: 1em;
+}
+
+.instructions nav {
+  display: inline-flex;
+  flex-direction: flex-end;
+}
+
+.instructions aside ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  gap: 0.6em;
+  padding: 0;
+  margin: 0;
+  color: #999;
+}
+
+.instructions aside li {
+  display: flex;
+  align-items: center;
+  gap: 0.4em;
+  margin: 0;
+}
+
+.instructions aside span {
+  content: '#444';
+  width: 1em;
+  height: 1em;
+  border-radius: 0.2em;
+}
+
+.instructions aside footer {
+  margin-top: 1em;
+  color: #999;
+}
+
+.instructions aside em {
+  color: #bbb;
+}
+
+.instructions aside pre {
+  display: inline-block;
+  margin: 0;
+  font-size: 1.3em;
+  color: #bbb;
+}
