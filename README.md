@@ -1,3 +1,3 @@
-# assignment-traffic-light-ikbxy2
+# assignment-traffic-light-react
 
-[Edit on StackBlitz ⚡️](https://stackblitz.com/edit/assignment-traffic-light-ikbxy2)
+An assignment using React, given by Devise Stockholm.
