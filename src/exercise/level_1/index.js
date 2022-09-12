@@ -26,6 +26,7 @@ export default () => {
               sequence is done using React states, not CSS animations.
             </p>
             <h2>Solution</h2>
+            
           </main>
         </>
       )}
