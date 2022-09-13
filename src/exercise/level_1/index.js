@@ -1,12 +1,16 @@
 import React, { useState } from 'react';
+import Trafficlight from '../Trafficlight';
 
-import '../exercise.css';
+import '../style.css';
+import '../../instructions/style.css';
 
 export default () => {
-  const [show, setShow] = useState(false);
+  // Define the number of lamps in use, and their colour names.
+  const colours = ['red', 'yellow', 'green'];
 
+  const [show, setShow] = useState(false);
   return (
-    <div className={`exercises ${show && 'active'}`}>
+    <div className={`instructions ${show && 'active'}`}>
       <nav>
         <button
           className={show ? 'active' : ''}
@@ -26,7 +30,14 @@ export default () => {
               sequence is done using React states, not CSS animations.
             </p>
             <h2>Solution</h2>
-            
+            {/* Signalling box */}
+            <div className="signal">
+              {/* Map the lamp colours to the trafficlight. */}
+              {colours.map((colour) => {
+                return <Trafficlight colour={colour} />;
+              })}
+            </div>
+            {/* End signalling box */}
           </main>
         </>
       )}
