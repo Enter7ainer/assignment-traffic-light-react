@@ -1,5 +1,6 @@
 import React from 'react';
 
+// If the lamp is inactive, display the colour with a 50% opacity.
 const Lamp = ({ colour, active }) => (
   <div
     className="lamp"
