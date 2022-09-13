@@ -5,10 +5,19 @@ import '../style.css';
 import '../../instructions/style.css';
 
 export default () => {
-  // Define the number of lamps in use, and their colour names.
-  const colours = ['red', 'yellow', 'green'];
+  // Define the number of lamps to use, with their colour hex values.
+  const colours = ['#ff0000', '#fff000', '#2CC52B'];
 
+  // Define the trafficlight signal input state.
+  const [light, setLight] = useState({ colours });
+
+  // Define the initial state of the navigation drop-down menu.
   const [show, setShow] = useState(false);
+
+  // Define the initial state of the timer in seconds.
+  const [time, setTime] = useState(0);
+
+  // Render the Level 1 coding test objective and solution.
   return (
     <div className={`instructions ${show && 'active'}`}>
       <nav>
@@ -30,14 +39,14 @@ export default () => {
               sequence is done using React states, not CSS animations.
             </p>
             <h2>Solution</h2>
-            {/* Signalling box */}
-            <div className="signal">
-              {/* Map the lamp colours to the trafficlight. */}
+            <div className="sign">
+              {/* Map the lamp colours to the trafficlight signal. */}
               {colours.map((colour) => {
-                return <Trafficlight colour={colour} />;
+                return (
+                  <Trafficlight colour={colour} light={light} time={time} />
+                );
               })}
             </div>
-            {/* End signalling box */}
           </main>
         </>
       )}

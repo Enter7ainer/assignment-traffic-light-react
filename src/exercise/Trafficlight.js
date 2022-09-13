@@ -1,11 +1,23 @@
 import React from 'react';
 
+import './style.css';
+
 // Define our lamps for colour cycling.
-const Trafficlight = ({ colour }) => {
+const Trafficlight = ({ colour, light, time }) => {
+
+  // requestAnimationFrame(signal);
+
+  // If the lamp has been signalled, display the light colour in full.
+  if (colour === light) {
+    return <div className="lamp" style={{ backgroundColor: colour }}></div>;
+  }
+
+  // Display the lamp light colour with a 50% opacity applied to it.
   return (
-    <div>
-      <div>{colour}</div>
-    </div>
+    <div
+      className="lamp"
+      style={{ backgroundColor: colour, opacity: 0.5 }}
+    ></div>
   );
 };
 
