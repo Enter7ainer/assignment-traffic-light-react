@@ -14,4 +14,4 @@ Display traffic lights with timing intervals of two seconds delay on red, one se
 
 ## Compliments
 
-A big thank you to Devise for giving me an opportunity to provide some solutions to this hyperthetical problem. There are many ways one could approach this assignment, but I opted for something that fit the inital outlay of the task - and jazzed it up a bit!
+A big thank you to Devise for giving me an opportunity to provide some solutions to this hyperthetical problem. There are many ways one could approach this assignment, I opted for something that fit the inital outlay of the task - and just jazzed it up a bit!

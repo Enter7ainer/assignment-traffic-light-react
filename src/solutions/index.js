@@ -2,8 +2,7 @@ import React, { useState } from 'react';
 import Signal_1 from '../Signal_1';
 import Signal_2 from '../Signal_2';
 
-import '../instructions/style.css';
-import './style.css';
+import './solutions.css';
 
 export default () => {
   // Define the initial state of the navigation drop-down menu.
@@ -11,7 +10,7 @@ export default () => {
 
   // Render the code test definitions and solutions.
   return (
-    <div className={`instructions ${show && 'active'}`}>
+    <div className={`solutions ${show && 'active'}`}>
       <nav>
         <button
           className={show ? 'active' : ''}
@@ -50,6 +49,6 @@ export default () => {
   );
 };
 /*
-  Written by Thomas EC. Smith on September 12th 2022
+  Refactored by Thomas EC. Smith on September 12th 2022
   For the attention of Martin Bohgard at Devise Stockholm.
 */

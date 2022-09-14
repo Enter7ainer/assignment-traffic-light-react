@@ -31,3 +31,7 @@ const Signal_2 = () => {
 };
 
 export default Signal_2;
+/*
+  Refactored by Thomas EC. Smith on September 12th 2022
+  For the attention of Martin Bohgard at Devise Stockholm.
+*/
