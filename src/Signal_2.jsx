@@ -12,7 +12,7 @@ const Signal_2 = () => {
   useEffect(() => {
     var counter = 0;
 
-    const timer = setTimeout(() => {
+    const timer = setInterval(() => {
       setColour((colour + 1) % 3);
       counter++;
     }, durations[colour]);
@@ -20,7 +20,7 @@ const Signal_2 = () => {
     // Clean up.
     return () => {
       if (counter === 1) {
-        clearTimeout(timer);
+        clearInterval(timer);
       }
     };
   });
