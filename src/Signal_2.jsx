@@ -1,28 +1,31 @@
 import Lamp from './Lamp';
 import React, { useEffect, useState } from 'react';
 
-// Define the duration of lamp lighting.
-const lightDurations = [2000, 1000, 2000];
+// Define the duration of lamp lighting in seconds.
+const durations = [2000, 2000, 1000];
 
-// Define the initial lamp to light.
-const Signal_2 = ({ initialValue }) => {
-  const [colourIndex, setColourIndex] = useState(initialValue);
+// Define the lamp to signal.
+const Signal_2 = () => {
+  const [colour, setColour] = useState(1);
 
+  // Iterate through each lamp light.
   useEffect(() => {
     const timer = setTimeout(() => {
-      setColourIndex((colourIndex + 1) % 3);
-    }, lightDurations[colourIndex]);
+      setColour((colour + 1) % 3);
+    }, durations[colour]);
+
+    // Clean up.
     return () => {
       clearTimeout(timer);
     };
   });
 
-  // Render the lamps.
+  // Signal the lamps!
   return (
     <div>
-      <Lamp colour="#ff0000" active={colourIndex === 0} />
-      <Lamp colour="#fff000" active={colourIndex === 2} />
-      <Lamp colour="#2CC52B" active={colourIndex === 1} />
+      <Lamp colour="#ff0000" active={colour === 0} />
+      <Lamp colour="#fff000" active={colour === 2} />
+      <Lamp colour="#2CC52B" active={colour === 1} />
     </div>
   );
 };

@@ -31,7 +31,7 @@ export default () => {
               sequence is done using React states, not CSS animations.
             </p>
             <div className="sign">
-              <Signal_1 initialValue={1} />
+              <Signal_1 />
             </div>
             <h2>Level 2</h2>
             <p>
@@ -41,7 +41,7 @@ export default () => {
               colour sequence is done using React states, not CSS animations.
             </p>
             <div className="sign">
-              <Signal_2 initialValue={1} />
+              <Signal_2 />
             </div>
           </main>
         </>
