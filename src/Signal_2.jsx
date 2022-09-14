@@ -10,13 +10,18 @@ const Signal_2 = () => {
 
   // Iterate through each lamp light.
   useEffect(() => {
-    const timer = setTimeout(() => {
+    var counter = 0;
+
+    const timer = setInterval(() => {
       setColour((colour + 1) % 3);
+      counter++;
     }, durations[colour]);
 
     // Clean up.
     return () => {
-      clearTimeout(timer);
+      if (counter == 1) {
+        clearInterval(timer);
+      }
     };
   });
 
