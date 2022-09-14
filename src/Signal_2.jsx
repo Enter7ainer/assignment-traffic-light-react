@@ -15,14 +15,12 @@ const Signal_2 = () => {
     const timer = setInterval(() => {
       setColour((colour + 1) % 3);
       counter++;
-    }, durations[colour]);
 
-    // Clean up.
-    return () => {
+      // Clean up.
       if (counter == 1) {
         clearInterval(timer);
       }
-    };
+    }, durations[colour]);
   });
 
   // Signal the lamps!
