@@ -12,15 +12,17 @@ const Signal_2 = () => {
   useEffect(() => {
     var counter = 0;
 
-    const timer = setInterval(() => {
+    const timer = setTimeout(() => {
       setColour((colour + 1) % 3);
       counter++;
-
-      // Clean up.
-      if (counter == 1) {
-        clearInterval(timer);
-      }
     }, durations[colour]);
+
+    // Clean up.
+    return () => {
+      if (counter === 1) {
+        clearTimeout(timer);
+      }
+    };
   });
 
   // Signal the lamps!
