@@ -4,26 +4,26 @@ import React, { useEffect, useState } from 'react';
 // Define the duration of lamp lighting in seconds.
 const durations = [2000, 2000, 1000];
 
-// Define the lamp to signal.
-const Signal_2 = () => {
-  const [colour, setColour] = useState(1);
-
-  // Iterate through each lamp light.
+// Iterate through each lamp light.
+function cycleLamps(colour, setColour, count, setCount) {
   useEffect(() => {
-    var counter = 0;
-
-    const timer = setInterval(() => {
+    const timer = setTimeout(() => {
       setColour((colour + 1) % 3);
-      counter++;
+      setCount(count + 1);
     }, durations[colour]);
 
     // Clean up.
-    return () => {
-      if (counter === 1) {
-        clearInterval(timer);
-      }
-    };
-  });
+    if (count === 2) clearTimeout(timer);
+  }, [count]);
+}
+
+// Define the lamp to signal.
+const Signal_2 = () => {
+  const [colour, setColour] = useState(1);
+  const [count, setCount] = useState(0);
+
+  // Run the lamp light change.
+  cycleLamps(colour, setColour, count, setCount);
 
   // Signal the lamps!
   return (
